@@ -1,0 +1,301 @@
+/* quick reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*  */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-attachment: fixed;
+    background-color: hsl(0, 0%, 15%);
+    background-image: url("./img/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+#main-container {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* blur effect for some of the semi-transparent backgrounds  */
+.blur {
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+/*  */
+
+/* call-to-action style for both `a` and `input` elements */
+.cta {
+    background: hsl(0, 0%, 10%);
+    border: 2px solid white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .25);
+    display: inline-block;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 25px auto;
+    padding: 10px 25px;
+    transition: background .25s, color .25s;
+}
+
+.cta:hover {
+    background: white;
+    color: hsl(0, 0%, 10%);
+}
+/*  */
+
+/* headings */
+h1, h2, h3 {
+    font-weight: 400;
+    margin: 25px 0;
+    text-align: center;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+
+h1::before,
+h1::after {
+    color:rgba(255, 255, 255, .25);
+    font-weight: bold;
+}
+
+h1::before { content: "[ "; }
+h1::after { content: " ]"; }
+/*  */
+
+header {
+    margin: 50px 25px 0 25px;
+    text-align: center;
+}
+
+header p {
+    margin-bottom: 25px;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px dashed rgba(255, 255, 255, .25);
+    margin: 75px 0;
+    height: 15px;
+}
+
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    color: white;
+    font-size: .85em;
+    margin: 25px 0;
+    max-width: 100%; /* overrides `cols="50"` on narrow windows */
+    padding: 10px;
+}
+
+/* navigation bar */
+nav {
+    color: rgba(255, 255, 255, .25);
+    margin: 25px;
+    text-align: right;
+}
+
+nav a {
+    color: rgba(255, 255, 255, .5);
+}
+
+nav a.active {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+/*  */
+
+/* top arrow and footer */
+.top {
+    font-size: 2em;
+    margin: 50px 25px 25px 25px;
+    text-align: right;
+}
+
+footer {
+    background: hsl(0, 0%, 10%);
+    color: rgba(255, 255, 255, .25);
+    margin-top: 25px;
+    min-height: 100px;
+    padding: 25px;
+}
+/*  */
+
+/* home page introduction */
+#intro {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+#intro img {
+    border: 5px solid white;
+    border-radius: 50%;
+    filter: contrast(.85);
+    padding: 5px;
+    width: 192px;
+}
+
+#intro ul.skills {
+    line-height: 4;
+    margin: 25px auto;
+}
+
+#intro ul.skills li {
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 10px;
+    color:rgba(255, 255, 255, .5);
+    display: inline;
+    font-size: .85em;
+    margin: 10px;
+    padding: 10px;
+}
+/*  */
+
+#projects,
+#contact {
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+.featured-projects {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 25px;
+}
+
+@media only screen and (max-width: 900px) {
+    .featured-projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+.featured-projects .item,
+.project .item {            /* in projects.html */
+    background: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    color:rgba(255, 255, 255, .25);
+    min-height: 256px;
+    min-width: 256px;
+    padding: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .project .item {        /* in projects.html */
+        margin: 0 auto;
+    }
+}
+
+/* resume page */
+#resume {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    margin: 50px 25px 0 25px;
+    padding: 25px;
+}
+
+#resume h2,
+#resume h3 {
+    margin: 0;
+    text-align: left;
+}
+
+#resume h2 {
+    border-bottom: 1px dashed rgba(255, 255, 255, .25);
+}
+
+#resume h3 {
+    color:rgba(255, 255, 255, .5);
+    font-size: 1em;
+    font-style: italic;
+}
+
+#resume p {
+    font-size: 1.15em;
+    margin: 25px 0 0 0;
+}
+
+#resume ul {
+    margin: 25px 0 50px 0;
+}
+
+#resume li {
+    color: rgba(255, 255, 255, .85);
+    list-style-type: none;
+    margin-left: 25px;
+}
+
+#resume li::before {
+    color: rgba(255, 255, 255, .25);
+    content: "+ ";
+}
+
+/* projects page */
+.project {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 2fr;
+    margin: 25px;
+    padding: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .project {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project .desc {
+    color: rgba(255, 255, 255, .75);
+    font-style: italic;
+    text-align: left;
+}
+
+/* contact page */
+#contact-form {
+    background: rgba(255, 255, 255, .05);
+    border-radius: 10px;
+    margin: 50px 25px;
+    padding: 50px;
+    text-align: center;
+}
+
+#contact-form label {
+    color:rgba(255, 255, 255, .75);
+    font-style: italic;
+}

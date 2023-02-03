@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Pham Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+    </style>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div id="main-container">
+
+        <nav>
+
+            <a href="./index.html">Home</a> /
+            <a href="./resume.html">Resume</a> /
+            <a href="./projects.html">Projects</a> /
+            <a class="active" href="./contact.html">Contact</a>
+
+        </nav>
+
+        <header>
+
+            <h1>Contact</h1>
+
+            <p>Use the form below to send me an email.</p>
+
+        </header>
+
+        <form id="contact-form" class="blur" action="#" method="post">
+
+            <div>
+                <label for="email">Your email address <sup>*</sup></label><br />
+                <input id="email" type="email" required>
+            </div>
+
+            <div>
+                <label for="message">Your message <sup>*</sup></label><br />
+                <textarea id="message" type="text" rows="8" cols="50" placeholder="No backend, don't bother." required></textarea>
+            </div>
+
+            <input class="cta" type="submit" value="send">
+
+        </form>
+
+        <div class="top"><a href="#top">&uarr;</a></div>
+
+    </div>
+
+    <footer>
+
+        <p>by <strong>LUCAS PHAM</strong> 2023</p>
+        <p>lucas@example.com</p>
+        <p>123 (456) 7890</p>
+
+    </footer>
+
+</body>
+</html>
